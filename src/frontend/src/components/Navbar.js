@@ -40,6 +40,40 @@ const Logo = styled(Link)`
 const NavLinks = styled.div`
   display: flex;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileMenuButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileMenu = styled(motion.div)`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 44px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    z-index: 1000;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -52,6 +86,12 @@ const NavLink = styled(Link)`
   &:hover {
     opacity: 1;
   }
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const ActiveIndicator = styled(motion.div)`
@@ -63,6 +103,7 @@ const ActiveIndicator = styled(motion.div)`
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const location = useLocation();
 
@@ -71,6 +112,10 @@ const Navbar = () => {
       setScrolled(latest > 50);
     });
   }, [scrollY]);
+  
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   return (
     <Nav scrolled={scrolled}>
@@ -82,7 +127,23 @@ const Navbar = () => {
           <NavLink to="/info">Info</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </NavLinks>
+        <MobileMenuButton onClick={toggleMobileMenu}>
+          {mobileMenuOpen ? '✕' : '☰'}
+        </MobileMenuButton>
       </NavContainer>
+      {mobileMenuOpen && (
+        <MobileMenu
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <NavLink to="/" onClick={toggleMobileMenu}>Home</NavLink>
+          <NavLink to="/services" onClick={toggleMobileMenu}>Services</NavLink>
+          <NavLink to="/info" onClick={toggleMobileMenu}>Info</NavLink>
+          <NavLink to="/contact" onClick={toggleMobileMenu}>Contact</NavLink>
+        </MobileMenu>
+      )}
     </Nav>
   );
 };

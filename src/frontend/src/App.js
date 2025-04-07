@@ -47,7 +47,7 @@ const PageContainer = styled(motion.div)`
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router basename="/landing-page-1">
         <AppContainer>
           <Navbar />
           <AnimatePresence mode="wait">

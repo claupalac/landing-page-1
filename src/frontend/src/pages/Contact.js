@@ -7,6 +7,10 @@ const ContactContainer = styled.div`
   min-height: 100vh;
   padding: 100px 20px;
   background: #f5f5f7;
+  
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
 `;
 
 const ContactContent = styled.div`
@@ -16,6 +20,11 @@ const ContactContent = styled.div`
   border-radius: 20px;
   padding: 60px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  @media (max-width: 768px) {
+    padding: 30px;
+    border-radius: 12px;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -23,6 +32,11 @@ const Title = styled(motion.h1)`
   font-weight: 600;
   margin-bottom: 40px;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
 `;
 
 const Form = styled.form`
@@ -41,6 +55,10 @@ const Label = styled.label`
   font-size: 16px;
   font-weight: 500;
   color: #333;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Input = styled.input`
@@ -53,6 +71,11 @@ const Input = styled.input`
   &:focus {
     outline: none;
     border-color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 10px 14px;
+    font-size: 14px;
   }
 `;
 

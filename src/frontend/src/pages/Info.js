@@ -6,6 +6,10 @@ const InfoContainer = styled.div`
   min-height: 100vh;
   padding: 100px 20px;
   background: #fff;
+  
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
 `;
 
 const InfoContent = styled.div`
@@ -18,16 +22,30 @@ const Title = styled(motion.h1)`
   font-weight: 600;
   margin-bottom: 40px;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
 `;
 
 const InfoSection = styled(motion.section)`
   margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const InfoTitle = styled.h2`
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 `;
 
 const InfoText = styled.p`
@@ -35,6 +53,11 @@ const InfoText = styled.p`
   line-height: 1.6;
   color: #333;
   margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
 const Info = () => {

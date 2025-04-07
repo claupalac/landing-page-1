@@ -6,6 +6,10 @@ const ServicesContainer = styled.div`
   min-height: 100vh;
   padding: 100px 20px;
   background: #fff;
+  
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
 `;
 
 const ServicesContent = styled.div`
@@ -18,16 +22,30 @@ const Title = styled(motion.h1)`
   font-weight: 600;
   margin-bottom: 40px;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
 `;
 
 const ServicesSection = styled(motion.section)`
   margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const ServiceTitle = styled.h2`
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 `;
 
 const ServiceText = styled.p`
@@ -35,6 +53,11 @@ const ServiceText = styled.p`
   line-height: 1.6;
   color: #333;
   margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
 const ServiceGrid = styled.div`
@@ -42,6 +65,12 @@ const ServiceGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
 `;
 
 const ServiceCard = styled(motion.div)`
@@ -54,18 +83,31 @@ const ServiceCard = styled(motion.div)`
   &:hover {
     transform: translateY(-5px);
   }
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const ServiceCardTitle = styled.h3`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 `;
 
 const ServiceCardText = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: #555;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Services = () => {
