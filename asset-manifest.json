@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/landing-page-1/static/js/main.e748904b.js",
+    "main.js": "/landing-page-1/static/js/main.5937fd9d.js",
+    "static/media/the_social_bird_logo.png": "/landing-page-1/static/media/the_social_bird_logo.bb1b4f90230a92ddaee7.png",
     "index.html": "/landing-page-1/index.html",
-    "main.e748904b.js.map": "/landing-page-1/static/js/main.e748904b.js.map"
+    "main.5937fd9d.js.map": "/landing-page-1/static/js/main.5937fd9d.js.map"
   },
   "entrypoints": [
-    "static/js/main.e748904b.js"
+    "static/js/main.5937fd9d.js"
   ]
 }
