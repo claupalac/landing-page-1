@@ -1,29 +1,16 @@
-version: '3.8'
+version: '3'
 
 services:
   frontend:
-    build:
-      context: ./src/frontend
-      dockerfile: Dockerfile
+    build: ./src/frontend
     ports:
       - "3000:3000"
+      - "3001:3001"
     volumes:
       - ./src/frontend:/app
       - /app/node_modules
     environment:
-      - NODE_ENV=development
-      - WDS_SOCKET_PORT=0
-      - CHOKIDAR_USEPOLLING=true
-    depends_on:
-      - backend
-
-  backend:
-    build:
-      context: ./src/backend
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./src/backend:/var/www/html
-    environment:
-      - PHP_ENV=development 
+      - REACT_APP_API_URL=http://localhost:3001
+      - GMAIL_EMAIL=${GMAIL_EMAIL}
+      - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD}
+      - NODE_ENV=development 

@@ -1,69 +1,58 @@
-# Modern Landing Page
+# Landing Page with Contact Form
 
-A beautiful, Apple-style landing page with PHP backend and React frontend, containerized with Docker.
+A modern landing page with a contact form that sends emails using PHPMailer with Gmail SMTP.
 
 ## Features
 
-- Modern, responsive design
-- Smooth animations and transitions
-- PHP backend API
-- Docker containerization
-- Apple-style UI/UX
+- React frontend with styled-components and Framer Motion animations
+- PHP backend with PHPMailer integration for email sending
+- Dockerized application for easy deployment
+- Responsive design
 
 ## Prerequisites
 
-- Docker
-- Docker Compose
+- Docker and Docker Compose
+- Gmail account
 
-## Getting Started
+## Setup
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd landing-page-1
-```
+1. Clone this repository
+2. Set up Gmail App Password:
+   - Go to your Google Account settings
+   - Navigate to Security > 2-Step Verification
+   - Scroll down to "App passwords"
+   - Create a new app password for "Mail" and "Other (Custom name)"
+   - Copy the generated 16-character password
+3. Copy the `.env.example` file to `.env` and add your Gmail credentials:
+   ```
+   GMAIL_EMAIL=your_gmail_address@gmail.com
+   GMAIL_APP_PASSWORD=your_gmail_app_password
+   ```
 
-2. Start the containers:
-```bash
-docker-compose up --build
-```
+## Running the Application
 
-3. Access the application:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
+1. Build and start the containers:
+   ```
+   docker-compose up -d
+   ```
 
-## Project Structure
-
-```
-.
-├── src/
-│   ├── frontend/          # React frontend
-│   │   ├── src/
-│   │   │   ├── components/
-│   │   │   ├── pages/
-│   │   │   └── App.js
-│   │   └── package.json
-│   └── backend/           # PHP backend
-│       └── index.php
-├── docker-compose.yml
-└── README.md
-```
+2. Access the application:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:3001
 
 ## Development
 
-- Frontend runs on port 3000
-- Backend API runs on port 8000
-- Hot reloading is enabled for both frontend and backend
+- Frontend code is in `src/frontend`
+- Backend code is in `src/backend`
 
-## Technologies Used
+## Deployment
 
-- Frontend:
-  - React
-  - Framer Motion
-  - Styled Components
-  - Material-UI
-- Backend:
-  - PHP
-- DevOps:
-  - Docker
-  - Docker Compose 
+For production deployment:
+
+1. Update the frontend API URL in `src/frontend/src/services/api.js`
+2. Make sure your Gmail account has 2-Step Verification enabled
+3. Consider using a dedicated email service for higher volume
+
+## License
+
+MIT 

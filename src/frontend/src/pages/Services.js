@@ -119,7 +119,7 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our Services
+          Nuestros servicios
         </Title>
         
         <ServicesSection
@@ -127,10 +127,10 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <ServiceTitle>What We Offer</ServiceTitle>
+          <ServiceTitle>Lo que ofrecemos</ServiceTitle>
           <ServiceText>
-            We provide a comprehensive range of services designed to meet your needs and exceed your expectations.
-            Our team of experts is dedicated to delivering high-quality solutions that drive results.
+            Ofrecemos un amplio rango de servicios diseñados para satisfacer tus necesidades y superar tus expectativas.
+            Nuestro equipo de expertos está dedicado a ofrecer soluciones de alta calidad que impulsan resultados.
           </ServiceText>
           
           <ServiceGrid>
@@ -139,9 +139,9 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <ServiceCardTitle>Web Development</ServiceCardTitle>
+              <ServiceCardTitle>Desarrollo web</ServiceCardTitle>
               <ServiceCardText>
-                Custom websites and web applications built with the latest technologies to provide an exceptional user experience.
+                Sitios web y aplicaciones web construidas con las últimas tecnologías para proporcionar una experiencia de usuario excepcional.
               </ServiceCardText>
             </ServiceCard>
             
@@ -150,9 +150,9 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <ServiceCardTitle>UI/UX Design</ServiceCardTitle>
+              <ServiceCardTitle>Diseño UI/UX</ServiceCardTitle>
               <ServiceCardText>
-                Beautiful, intuitive interfaces that enhance user engagement and satisfaction across all devices.
+                Interfaces atractivas e intuitivas que aumentan la participación y la satisfacción del usuario en todos los dispositivos.
               </ServiceCardText>
             </ServiceCard>
             
@@ -161,9 +161,9 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <ServiceCardTitle>Digital Marketing</ServiceCardTitle>
+              <ServiceCardTitle>Marketing digital</ServiceCardTitle>
               <ServiceCardText>
-                Strategic marketing solutions to increase visibility, drive traffic, and convert visitors into customers.
+                Soluciones de marketing estratégicas para aumentar la visibilidad, impulsar el tráfico y convertir visitantes en clientes.
               </ServiceCardText>
             </ServiceCard>
           </ServiceGrid>
@@ -174,10 +174,10 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <ServiceTitle>Our Process</ServiceTitle>
+          <ServiceTitle>Nuestro proceso</ServiceTitle>
           <ServiceText>
-            We follow a proven methodology to ensure the success of every project. Our process is transparent,
-            collaborative, and focused on delivering the best possible results for our clients.
+            Siguimos un método probado para garantizar el éxito de cada proyecto. Nuestro proceso es transparente,
+            colaborativo y enfocado en entregar los mejores resultados para nuestros clientes.
           </ServiceText>
         </ServicesSection>
       </ServicesContent>

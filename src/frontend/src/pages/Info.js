@@ -69,7 +69,7 @@ const Info = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          About Us
+          Sobre nosotros
         </Title>
         
         <InfoSection
@@ -77,10 +77,10 @@ const Info = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <InfoTitle>Our Mission</InfoTitle>
+          <InfoTitle>Nuestra misión</InfoTitle>
           <InfoText>
-            We are dedicated to creating innovative solutions that transform the way people interact with technology.
-            Our mission is to make technology more accessible, intuitive, and enjoyable for everyone.
+            Nos dedicamos a crear soluciones innovadoras que transforman la forma en que las personas interactúan con la tecnología.
+            Nuestra misión es hacer que la tecnología sea más accesible, intuitiva y entretenida para todos.
           </InfoText>
         </InfoSection>
         
@@ -89,11 +89,11 @@ const Info = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <InfoTitle>Our Vision</InfoTitle>
+          <InfoTitle>Nuestra visión</InfoTitle>
           <InfoText>
-            We envision a future where technology seamlessly integrates into everyday life,
-            enhancing experiences rather than complicating them. We believe in creating products
-            that are both beautiful and functional.
+            Nos proyectamos a un futuro donde la tecnología se integra de manera sin esfuerzo en la vida cotidiana,
+            mejorando las experiencias en lugar de complicarlas. Creemos en crear productos
+            que son tanto hermosos como funcionales.
           </InfoText>
         </InfoSection>
         
@@ -102,11 +102,11 @@ const Info = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <InfoTitle>Our Values</InfoTitle>
+          <InfoTitle>Nuestros valores</InfoTitle>
           <InfoText>
-            We value innovation, quality, and user experience above all else. We believe in
-            continuous improvement and are always looking for ways to enhance our products
-            and services.
+            Valoramos la innovación, la calidad y la experiencia del usuario por encima de todo. Creemos en
+            el constante mejoramiento y siempre buscamos formas de mejorar nuestros productos
+            y servicios.
           </InfoText>
         </InfoSection>
       </InfoContent>

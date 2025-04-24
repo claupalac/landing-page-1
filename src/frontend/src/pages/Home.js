@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import logo from '../assets/the_social_bird_logo.png';
+
 
 const HomeContainer = styled.div`
   min-height: 100vh;
@@ -111,19 +111,15 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Welcome to the Future */}
+          Bienvenid@ a tu landing page
           <br />
-          <img 
-            src={logo} 
-            alt="the_social_bird_logo" 
-          />
         </Title>
         <Subtitle
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Experience innovation at its finest. Discover what's possible when design meets technology.
+          Impacta tu negocio con una landing page profesional y atractiva.
         </Subtitle>
       </HeroSection>
 
@@ -133,22 +129,22 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <h2>Feature 1</h2>
-            <p>Discover the power of innovation</p>
+            <h2>Diseño profesional</h2>
+            <p>Diseño profesional y atractivo para tu landing page.</p>
           </ProductCard>
           <ProductCard
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <h2>Feature 2</h2>
-            <p>Experience seamless integration</p>
+            <h2>Diseño responsivo</h2>
+            <p>Diseño responsivo para cualquier dispositivo.</p>
           </ProductCard>
           <ProductCard
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <h2>Feature 3</h2>
-            <p>Unleash your creativity</p>
+            <h2>Diseño personalizado</h2>
+            <p>Diseño personalizado para tu landing page.</p>
           </ProductCard>
         </ProductGrid>
       </ProductSection>

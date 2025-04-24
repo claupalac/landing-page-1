@@ -120,12 +120,12 @@ const Navbar = () => {
   return (
     <Nav scrolled={scrolled}>
       <NavContainer>
-        <Logo to="/">The Social Bird</Logo>
+        <Logo to="/">WebMakers</Logo>
         <NavLinks>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/">Inicio</NavLink>
+          <NavLink to="/services">Servicios</NavLink>
           <NavLink to="/info">Info</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact">Contacto</NavLink>
         </NavLinks>
         <MobileMenuButton onClick={toggleMobileMenu}>
           {mobileMenuOpen ? '✕' : '☰'}
@@ -138,10 +138,10 @@ const Navbar = () => {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <NavLink to="/" onClick={toggleMobileMenu}>Home</NavLink>
-          <NavLink to="/services" onClick={toggleMobileMenu}>Services</NavLink>
+          <NavLink to="/" onClick={toggleMobileMenu}>Inicio</NavLink>
+          <NavLink to="/services" onClick={toggleMobileMenu}>Servicios</NavLink>
           <NavLink to="/info" onClick={toggleMobileMenu}>Info</NavLink>
-          <NavLink to="/contact" onClick={toggleMobileMenu}>Contact</NavLink>
+          <NavLink to="/contact" onClick={toggleMobileMenu}>Contacto</NavLink>
         </MobileMenu>
       )}
     </Nav>

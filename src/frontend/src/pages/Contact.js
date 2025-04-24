@@ -158,6 +158,7 @@ const Contact = () => {
     setError(null);
     
     try {
+      console.log('Submitting form with data:', formData);
       // Send form data to the backend
       await submitContactForm(formData);
       setSubmitted(true);
@@ -174,7 +175,7 @@ const Contact = () => {
       }, 3000);
     } catch (err) {
       console.error('Error submitting form:', err);
-      setError('Failed to send message. Please try again later.');
+      setError(err.message || 'Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -188,12 +189,12 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Contact Us
+          Contáctanos
         </Title>
         
         <Form onSubmit={handleSubmit}>
           <FormGroup>
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">Nombre</Label>
             <Input
               type="text"
               id="name"
@@ -206,7 +207,7 @@ const Contact = () => {
           </FormGroup>
           
           <FormGroup>
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Correo electrónico</Label>
             <Input
               type="email"
               id="email"
@@ -219,7 +220,7 @@ const Contact = () => {
           </FormGroup>
           
           <FormGroup>
-            <Label htmlFor="subject">Subject</Label>
+            <Label htmlFor="subject">Asunto</Label>
             <Input
               type="text"
               id="subject"
@@ -232,7 +233,7 @@ const Contact = () => {
           </FormGroup>
           
           <FormGroup>
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">Mensaje</Label>
             <TextArea
               id="message"
               name="message"
@@ -249,7 +250,7 @@ const Contact = () => {
             whileTap={{ scale: 0.98 }}
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
           </Button>
         </Form>
         
@@ -259,7 +260,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
           >
-            Thank you for your message! We'll get back to you soon.
+            Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.
           </SuccessMessage>
         )}
         
