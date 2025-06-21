@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Info from './pages/Info';
 import Contact from './pages/Contact';
@@ -65,6 +66,7 @@ function App() {
               </Routes>
             </PageContainer>
           </AnimatePresence>
+          <Footer />
         </AppContainer>
       </Router>
     </ThemeProvider>
